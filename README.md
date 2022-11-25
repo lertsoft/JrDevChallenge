@@ -89,7 +89,9 @@ For reference:
  
  #### Answer
  
- [Click Here]()
+ [Click Here](https://lertsoft.github.io/JrDevChallenge/)
+ 
+ Aside Bottom does not work on full screen because ?? I could not get it to stick below aside Top without messing with the entire grid... Will revise and update this if I find a solution.
 
 
 
