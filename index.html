@@ -3,7 +3,95 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="/style.css">
+<!--    <link rel="stylesheet" href="/style.css"> -->
+   <style>
+      /* Body fonts */
+body {
+    font-family: “Helvetica Neue”, sans-serif, -apple-system;
+}
+
+/* Grid */
+.container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    justify-items: center;
+}
+
+/* Wrapper for main, aside top, and aside bottom */
+.wrapper {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 6;
+    grid-column-end: 3;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+ /* sizes variants depending on viewport size */
+.wrapper > .aside {
+    flex:max(390px, 100%/2 - 20px); /* Mobile breakpoint */ 
+}
+
+.wrapper > div {
+    flex:max(625px, 100%/2 - 20px); /* Desktop breakpoint */ 
+}
+
+.header {
+    /* This is equivalent to saying:
+    grid-row-start: 1; 
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 4;  
+    */
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+/* Footer */
+.footer {
+    grid-area: 8 / 1 / 8 / 3;
+
+}
+
+.aside {
+    padding: 10px 10px 20px 10px;
+}
+
+.main {
+    /* grid-column: 2; */
+    grid-area: 3 / 1 / 4 / 2;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.asideTop  {
+    /* grid-column: 3; */
+    grid-area: 3 / 3 / 4 / 3;
+}
+      
+.asideBottom {
+    grid-area: 5 / 3 / 6 / 3;
+    /* grid-column: 3; */
+}
+
+/* Text color */
+.code {
+    color: #6624f4;
+
+}
+
+.comment {
+    color: #4c9a46;
+    
+}
+
+.answer {
+    color: #a9100b;
+}
+
+
+   </style>
    <title>Junior Developer Coding Challenge</title>
 </head>
 <body>
