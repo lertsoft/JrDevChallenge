@@ -91,7 +91,29 @@ For reference:
  
  [Click Here](https://lertsoft.github.io/JrDevChallenge/)
  
- Aside Bottom does not work on full screen because ?? I could not get it to stick below aside Top without messing with the entire grid... Will revise and update this if I find a solution.
+ > Aside Bottom does not work on full screen because ?? I could not get it to stick below aside Top without messing with the entire grid... Will revise and update this if I find a solution.
+ 
+ On the CSS Grid Layout challenge I started off with some good ideas on how to approach it. I knew that if i couldn’t use media queries to make the design responsive then that meant that I needed to use relative values like percentages % or viewport values because if i used absolute values ie. pixels then my design will not respond to any changes in screen because the values are define. 
+
+After setting up the grid and getting the layout somewhat done I started to look for solutions for the responsive design without media queries. I had an intuition that I could use device id or browser id to check if it is mobile but that would need javascript and I wanted to keep CSS only, so i continued thinking. I when through all the references provided and reading CSS documentation and as I continue looking for solutions I found the flex box solution that I ended up using and it works fine. It is a good alternative to media queries and I will probably use it more often on my personal projects as it reduces the amount of media queries necessary.
+
+But that solution did not solve all my problems as one of the elements is not correctly position on the page at full screen :(
+
+When solving that issue it would created another issue somewhere else and so I went back to the documentation to see how I could fixed it. These are the Solutions that I thought could work but did not:
+
+1. Implementing the grid layout to place it on the last grid column. This does not work because that element is within a flex box.
+2. Utilizing a flexbox row, column, and revert row layout to fixed it but that did not solved the issue.
+3. Adding an extra div on the HTML. That solve that issue but create issues on the responsiveness of the layouts on tablet screens.
+4. Using relative and absolute positioning. It creates the same responsiveness issues as the solution above.
+5. Trying out the Z index. That does nothing because the elements are not on top of each other.
+6. Adding different wrapper and div to position it. It has the same outcome as the way it is now.
+7. Deleting the flex boxes but this also eliminates the responsiveness…
+8. Using all the flex boxes attributes available on CSS to no avail.
+9. Adding more flex boxes statements on css to the specifics elements.
+10. Trying every single self, content, item, and any other positioning CSS attribute but they did not solved the problem.
+
+I missed a lot of other CSS attributes but I will continue to add more as I continue to find the answer.
+
 
 
 
