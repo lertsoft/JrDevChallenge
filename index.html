@@ -3,9 +3,9 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!--    <link rel="stylesheet" href="/style.css"> -->
+   <!-- <link rel="stylesheet" href="/style.css"> -->
    <style>
-      /* Body fonts */
+    /* Body fonts */
 body {
     font-family: “Helvetica Neue”, sans-serif, -apple-system;
 }
@@ -14,27 +14,31 @@ body {
 .container {
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: 2fr, 1fr, 1fr;
+    grid-gap: 10px;
     justify-items: center;
 }
 
 /* Wrapper for main, aside top, and aside bottom */
 .wrapper {
-    grid-row-start: 3;
+    width: 100%;
+    /* grid-row-start: 3;
     grid-column-start: 1;
     grid-row-end: 6;
-    grid-column-end: 3;
+    grid-column-end: 3; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
  /* sizes variants depending on viewport size */
 .wrapper > .aside {
-    flex:max(390px, 100%/2 - 20px); /* Mobile breakpoint */ 
+    flex:max(380px, 100%/2 - 20px); /* Mobile breakpoint */ 
 }
 
 .wrapper > div {
-    flex:max(625px, 100%/2 - 20px); /* Desktop breakpoint */ 
+    flex:max(620px, 100%/2 - 20px); /* Desktop breakpoint */ ;
+    
 }
 
 .header {
@@ -55,23 +59,11 @@ body {
 
 .aside {
     padding: 10px 10px 20px 10px;
+    /* flex-wrap: inherit; */
 }
 
 .main {
-    /* grid-column: 2; */
-    grid-area: 3 / 1 / 4 / 2;
     padding: 10px 10px 10px 10px;
-}
-
-.asideTop  {
-    /* grid-column: 3; */
-    grid-area: 3 / 3 / 4 / 3;
-}
-      
-.asideBottom {
-    grid-area: 5 / 3 / 6 / 3;
-    /* grid-column: 3; */
-
 }
 
 /* Text color */
@@ -85,9 +77,7 @@ body {
     
 }
 
-.answer {
-    color: #a9100b;
-}
+
    </style>
    <title>Junior Developer Coding Challenge</title>
 </head>
@@ -95,7 +85,8 @@ body {
    <div class="container">
         <!-- Header -->
            <h1 class="header"> Junior Developer Coding Challenge </h1>
-      
+        <!--End of Header -->
+
        <div class="wrapper">
         <!-- Main | Task 1 -->
        <div class="main">
@@ -144,15 +135,21 @@ body {
            </span><br></br>
            </p><br>
            </div>
+           <!-- End of Main | Task 1 -->
  
       <!-- Aside Top | Task 2 -->
        <div class="asideTop aside"><bold>Aside Top</bold>
            <h3>2. CSS Grid Layout</h3>
            <p> See the layouts below, which are, from left to right, for <bold>desktop (1280px wide and up)</bold>, <bold>tablet (768-1279px)</bold>, and <bold>mobile (768px).</bold>
             The challenge is to produce markup and CSS that would generate this responsive layout without using any media queries.
-            The "deliverable" for this challenge can be as simple as an HTML file with styling in the head, though you can choose to use a preprocessor like Sass, PostCSS, Stylus, or Less and organize the files any way you'd like.
+            The "deliverable" for this challenge can be as simple as an HTML file with styling in the head, though you can choose to use a preprocessor like Sass, PostCSS, Stylus, or Less and organize the files any way you'd like.<br><br>
+            <a href="https://github.com/lertsoft/JrDevChallenge" target="_blank"> REPO FOR THIS PAGE</a><br><br>
+            <a href="https://lertsoft.github.io/JrDevChallenge/" target="_blank"> LIVE WEBSITE </a>
         </p>
        </div>
+       <!-- End of Aside Top | Task 2 -->
+
+       <!-- <div></div> -->
 
        <!-- Aside Bottom | Task 3 -->
        <div class="asideBottom aside">Aside Bottom
@@ -167,7 +164,7 @@ how closure can be applied to the following case:<br>
 <span class="answer">
 A. What is a closure? A closure is a nested function. A function within another function.<br>
          A function that has a main / parent function and a child / secondary function within it.<br>
-B. Closure Currying description.</span><br>
+B. Closure Currying description.</span><br><br>
 <span class="comment">// This is a simple curried function. <br>
 // closure is implemented in this function with the separation of the functions arg(a) and arg(b) within the currying function arg(f).</span><br>
 <span class="code">function currying(f) { </span> <span class="comment">// this function is doing the transformation of the other two functions</span><br>
@@ -230,10 +227,11 @@ count();</span> <span class="comment">// function call<br><br>
 count();</span> <span class="comment"> // function call </span><br>
 </p>
        </div>
+       <!-- End of Aside Bottom | Task 3 -->
        </div>
-     <!--  Footer  -->
+    <!--  Footer  -->
        <div class="footer"> 👨🏽‍💻 by Ronny</div>
- 
+    <!-- End of Footer  -->
  
    </div>
   
