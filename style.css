@@ -7,31 +7,32 @@ body {
 .container {
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: 2fr, 1fr, 1fr;
+    grid-gap: 10px;
     justify-items: center;
 }
 
 /* Wrapper for main, aside top, and aside bottom */
 .wrapper {
-    grid-row-start: 3;
+    width: 100%;
+    /* grid-row-start: 3;
     grid-column-start: 1;
     grid-row-end: 6;
-    grid-column-end: 3;
+    grid-column-end: 3; */
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: space-between;
 }
 
  /* sizes variants depending on viewport size */
 .wrapper > .aside {
-    flex:max(390px, 100%/2 - 20px); /* Mobile breakpoint */ 
+    flex:max(380px, 100%/2 - 20px); /* Mobile breakpoint */ 
 }
 
 .wrapper > div {
-    flex:max(625px, 100%/2 - 20px); /* Desktop breakpoint */ 
+    flex:max(620px, 100%/2 - 20px); /* Desktop breakpoint */ ;
+    
 }
-
-
 
 .header {
     /* This is equivalent to saying:
@@ -49,32 +50,14 @@ body {
 
 }
 
-
-
 .aside {
     padding: 10px 10px 20px 10px;
+    /* flex-wrap: inherit; */
 }
 
 .main {
-    /* grid-column: 2; */
-    grid-area: 3 / 1 / 4 / 2;
     padding: 10px 10px 10px 10px;
-
 }
-
-.asideTop  {
-    /* grid-column: 3; */
-    grid-area: 3 / 3 / 4 / 3;
-}
-
-
-.asideBottom {
-    grid-area: 5 / 3 / 6 / 3;
-    /* grid-column: 3; */
-
-}
-
-
 
 /* Text color */
 .code {
@@ -85,9 +68,5 @@ body {
 .comment {
     color: #4c9a46;
     
-}
-
-.answer {
-    color: #a9100b;
 }
 
